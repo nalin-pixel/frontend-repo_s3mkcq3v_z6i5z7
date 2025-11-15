@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
-import Spline from '@splinetool/react-spline'
 import { motion, AnimatePresence } from 'framer-motion'
 import { BellRing } from 'lucide-react'
+import ThreeHouse from './ThreeHouse'
 
 export default function Hero({ onStart }) {
   const [loaded, setLoaded] = useState(false)
@@ -19,7 +19,7 @@ export default function Hero({ onStart }) {
   return (
     <section id="entry" className="relative h-screen w-full overflow-hidden">
       <div className="absolute inset-0">
-        <Spline scene="https://prod.spline.design/VJLoxp84lCdVfdZu/scene.splinecode" style={{ width: '100%', height: '100%' }} onLoad={() => setLoaded(true)} />
+        <ThreeHouse onLoaded={() => setLoaded(true)} />
       </div>
 
       {/* Overlay gradient and copy */}
